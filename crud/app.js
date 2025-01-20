@@ -54,4 +54,5 @@ app.post("/update/:userid", async(req, res)=>{
     let user=await userModel.findOneAndUpdate({_id: req.params.userid}, {image, email, name}, {new: true})
     res.redirect('/read')
 })
+
 app.listen(3000)
